@@ -24,6 +24,7 @@
               <% @products.each_with_index do |product, index| %>
                 <div class="<%= index == 0 ? 'item active' : 'item' %>">
                   <%= image_tag product.image_path, class: 'slide-item', style: 'max-width: 800px; max-height: 300px;' %>
+                  <%= ProductHelper.product_discount_info product %>
                 </div>
               <% end %>
             </div>
